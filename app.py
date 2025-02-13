@@ -129,7 +129,7 @@ def draw_cricket_field():
     for fielder, (x, y) in st.session_state.field_positions.items():
         if np.sqrt(x**2 + y**2) > inner_circle_radius:
             outside_circle += 1
-        ax.scatter(x, y, color='red', s=100, edgecolor='black', linewidth=1.2)
+        ax.scatter(x, y, color='red', s=50, edgecolor='black', linewidth=1.2)
         ax.text(x + 2, y + 2, fielder, fontsize=10, color="white", ha="left",
                 bbox=dict(facecolor='black', alpha=0.5))
     
