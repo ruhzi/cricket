@@ -45,21 +45,21 @@ def clip_to_circle(point, radius):
     return (x * radius / d, y * radius / d) if d > radius else point
 
 new_presets = {
-    "Wicketkeeper": (5, -30),
-    "First Slip": (20, -35),
-    "Second Slip": (25, -30),
-    "Third Slip": (30, -25),
-    "Gully": (35, -15),
-    "Leg Slip": (-20, -35),
-    "Silly Point": (15, -25),
-    "Short Leg": (-15, -25),
-    "Point": (30, -15),
-    "Cover": (35, -5),
-    "Mid-Off": (40, 5),
-    "Mid-On": (-40, 5),
-    "Mid-Wicket": (-35, -5),
-    "Square Leg": (-30, -15),
-    "Short Fine Leg": (-25, -25),
+    "Wicketkeeper": (5, -28),
+    "First Slip": (12, -21),
+    "Second Slip": (15, -20),
+    "Third Slip": (18, -18),
+    "Gully": (26, -15),
+    "Leg Slip": (-12, -21),
+    "Silly Point": (18, -9),
+    "Short Leg": (-15, -7),
+    "Point": (26, -10),
+    "Cover": (24, 0),
+    "Mid-Off": (26, 14),
+    "Mid-On": (-26, 14),
+    "Mid-Wicket": (-27, 0),
+    "Square Leg": (-27, -11),
+    "Short Fine Leg": (-20, -20),
     "Third Man": (40, -35),
     "Deep Cover": (45, 15),
     "Long Off": (45, 35),
@@ -67,7 +67,7 @@ new_presets = {
     "Deep Mid-Wicket": (-40, 15),
     "Deep Square Leg": (-40, -5),
     "Fine Leg": (-35, -25),
-    "Bowler": (0, 30)
+    "Bowler": (0, 28)
 }
 
 def adjust_for_handedness(point, handedness):
