@@ -5,6 +5,88 @@ import json
 
 st.set_page_config(page_title="Cricket Field Simulator", layout="wide")
 
+# Inject enhanced custom CSS
+custom_css = """
+<style>
+/* Hide default Streamlit header, footer, and sidebar navigation */
+header {visibility: hidden;}
+footer {visibility: hidden;}
+[data-testid="stSidebarNav"] {display: none;}
+
+/* Style the main container */
+.reportview-container .main .block-container {
+    padding: 2rem;
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Body and background styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #ece9e6, #ffffff);
+    margin: 0;
+}
+
+/* Title styling */
+h1 {
+    color: #2c3e50;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 0.5em;
+}
+
+/* General text styling */
+p, label, .css-1d391kg {
+    color: #333;
+}
+
+/* Sidebar styling with a darker theme */
+[data-testid="stSidebar"] {
+    background-color: #2c3e50;
+    border-right: 1px solid #1a252f;
+    padding: 1rem;
+    color: white;
+}
+
+/* Ensure sidebar text is white */
+[data-testid="stSidebar"] * {
+    color: white;
+}
+
+/* Customize Streamlit buttons */
+button {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #34495e;
+}
+
+/* Customize download button */
+a[data-baseweb="button"] {
+    background-color: #2c3e50 !important;
+    color: white !important;
+    border-radius: 4px !important;
+    padding: 0.5em 1em !important;
+    text-decoration: none !important;
+}
+a[data-baseweb="button"]:hover {
+    background-color: #34495e !important;
+}
+</style>
+"""
+
+
+st.markdown(custom_css, unsafe_allow_html=True)
+
+
+
 field_radius = 50      
 pitch_length = 22      
 inner_circle_radius = 30  
@@ -149,3 +231,12 @@ st.sidebar.download_button(
     file_name="field_setup.json",
     mime="application/json"
 )
+
+st.markdown("""
+    <div style="text-align: center; margin: 2rem auto; font-size: 1.1em; color: #666; padding: 12px; background-color: #d0d0d0; border-radius: 8px; width: fit-content;">
+        Made by <a href="https://x.com/ruhzi57" target="_blank" style="color: #2c3e50; text-decoration: none;">ruhzi</a>
+    </div>
+    """, unsafe_allow_html=True)
+
+
+
